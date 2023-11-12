@@ -1,0 +1,76 @@
+
+/* Restoring browser effects */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* All of the same styling to the body */
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(images/patek\ philippe\ nautilus\ 2\ \(2\)\ \(3\).png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Sizing, positioning of main dial of the clock */
+.clock {
+    position: absolute;
+    height: 50vh; /* Change to 50% of viewport height */
+    width: 50vh;  /* Keep this value for a circular clock */
+    margin-top: -10.5vh; /* Adjusted to center vertically */
+    margin-left: -6.5vh;   /* Keep this value */
+}
+
+.hr,
+.min,
+.sec {
+    width: 1.6%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    transform-origin: bottom;
+    z-index: 2;
+    border-radius: 2em;
+}
+
+.pin {
+    position:absolute;
+    top: 0%;
+    left: 0;
+    right: 0%;
+    bottom: 0;
+    width: 1em;
+    height: 1em;
+    background:black;
+    border: 2px solid #ffffff;
+    border-radius: 10em;
+    margin: auto;
+    z-index: 10;
+}
+
+/* Different length of different hands of clock */        
+.hr {
+    height: 20%;
+    background-color:whitesmoke;
+    border: 2px solid black;
+}
+
+.min {
+    height: 30%;
+    background-color:black;
+    border: 2px solid silver;
+}
+
+.sec {
+    height: 38%;
+    background-color:silver;
+    transform-origin: 50% 85%;
+    border: 2px solid #ffffff;
+}
